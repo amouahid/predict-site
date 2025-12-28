@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Predict – Modélisation en CO₂ supercritique</title>
+  <style>
+    :root{
+      --blue:#004080; --blue-2:#0a5bd7; --text:#1f2a37; --muted:#6b7280; --bg:#f7f9fc; --card:#ffffff; --accent:#22c55e;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;color:var(--text);background:var(--bg)}
+    a{color:var(--blue-2);text-decoration:none}
+
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .hero{padding:56px 0;text-align:center;background:linear-gradient(180deg,#eaf1ff,rgba(255,255,255,0));}
+    .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 12px;color:var(--blue)}
+    .hero p{font-size:clamp(16px,2.2vw,20px);color:var(--muted);margin:0 auto;max-width:820px}
+
+    .cta{display:inline-flex;gap:12px;margin-top:24px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:10px;font-weight:600;border:1px solid transparent}
+    .btn.primary{background:var(--blue);color:#fff}
+    .btn.secondary{background:#fff;color:var(--blue);border-color:#cfd8ea}
+    .btn:hover{filter:brightness(1.05)}
+
+    .badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+    .badge{font-size:12px;border:1px solid #d7dfef;padding:6px 10px;border-radius:999px;color:var(--muted);background:#fff}
+
+    .section{padding:36px 0}
+    .section h2{font-size:28px;margin:0 0 8px;color:var(--blue)}
+    .section p.lead{color:var(--muted);margin:0 0 22px}
+
+    .grid{display:grid;gap:18px}
+    @media (min-width: 900px){ .grid.cols-3{grid-template-columns: repeat(3,1fr)} }
+    @media (min-width: 700px){ .grid.cols-2{grid-template-columns: repeat(2,1fr)} }
+
+    .card{background:var(--card);border:1px solid #e7ecf7;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,0.04);padding:20px}
+    .card h3{margin:0 0 6px}
+    .muted{color:var(--muted)}
+
+    /* Pricing */
+    .pricing .card{position:relative;overflow:hidden}
+    .price{font-size:32px;font-weight:800;color:var(--blue)}
+    .per{font-size:14px;color:var(--muted)}
+    .features{margin:12px 0 18px;padding:0;list-style:none}
+    .features li{padding:6px 0;border-bottom:1px dashed #e6eaf3}
+    .features li:last-child{border-bottom:none}
+    .ribbon{position:absolute;top:14px;right:-38px;background:var(--accent);color:white;padding:6px 46px;transform:rotate(35deg);font-size:12px;font-weight:700}
+
+    /* Two-column info */
+    .info{align-items:start}
+    .info .card{padding:24px}
+
+    .footer{padding:26px 0;text-align:center;color:var(--muted);font-size:13px}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Predict – la solution experte pour la modélisation en CO₂ supercritique</h1>
+      <p>Gagnez du temps, réduisez les essais coûteux et prenez des décisions robustes grâce à des modèles validés (Sovova 2005/2011, EoS, Hansen, Joback) et une base SC‑CO₂ unique.</p>
+      <div class="cta">
+        <a class="btn primary" href="#essai">Demander un essai gratuit (14 jours)</a>
+        <a class="btn secondary" href="#tarifs">Voir les tarifs</a>
+      </div>
+      <div class="badges">
+        <span class="badge">Licence nominative par machine</span>
+        <span class="badge">Mises à jour & support inclus</span>
+        <span class="badge">Conçu pour les laboratoires</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container" id="pourquoi">
+      <h2>Pourquoi choisir Predict ?</h2>
+      <p class="lead">Une plateforme pensée pour les laboratoires et équipes procédés travaillant en CO₂ supercritique : modèles fiables, flux de travail clairs, résultats exploitables.</p>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Modèles validés</h3>
+          <p class="muted">Sovova (2005 & 2011), VLE CO₂ + solvant, propriétés de mélange, Hansen, Joback, surfaces de réponses.</p>
+        </div>
+        <div class="card">
+          <h3>Gain de temps</h3>
+          <p class="muted">Moins d’essais, meilleure reproductibilité, visualisations et rapports prêts pour la publication.</p>
+        </div>
+        <div class="card">
+          <h3>Abonnement flexible</h3>
+          <p class="muted">Trois niveaux simples : Starter, Standard, Premium. Mise à niveau à tout moment.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container pricing" id="tarifs">
+      <h2>Tarifs – Abonnement annuel</h2>
+      <p class="lead">Mises à jour et support inclus. Licence nominative par machine. Idéal pour les laboratoires (France/UE).</p>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Starter</h3>
+          <div class="price">450 € <span class="per">/ an</span></div>
+          <ul class="features">
+            <li><strong>SOVOVA Kinetics</strong> (2005 & 2011)</li>
+            <li><strong>Kinetics Plotter</strong> (visualisation rapide)</li>
+            <li>Mises à jour & support email</li>
+          </ul>
+          <a class="btn primary" href="#essai">Commencer</a>
+        </div>
+        <div class="card" style="border-color:#b8e6c8;box-shadow:0 6px 20px rgba(34,197,94,0.12)">
+          <span class="ribbon">Recommandé</span>
+          <h3>Standard</h3>
+          <div class="price">1 200 € <span class="per">/ an</span></div>
+          <ul class="features">
+            <li><strong>Solubility Suite</strong> (5 modèles + prédictifs)</li>
+            <li><strong>VLE & Propriétés de mélange</strong></li>
+            <li><strong>SOVOVA Kinetics + Plotter</strong></li>
+          </ul>
+          <a class="btn primary" href="#essai">Essayer maintenant</a>
+        </div>
+        <div class="card">
+          <h3>Premium</h3>
+          <div class="price">1 900 € <span class="per">/ an</span></div>
+          <ul class="features">
+            <li>Tous les modules (cinétiques, solubilité, VLE, Hansen)</li>
+            <li><strong>Scale‑Up</strong> pour le dimensionnement</li>
+            <li><strong>Joback</strong> + <strong>Surfaces de réponses (DOE)</strong></li>
+          </ul>
+          <a class="btn primary" href="#contact">Demander un devis</a>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:10px">Licence flottante disponible sur demande. Site licence académique possible (forfait). Contactez‑nous.</p>
+    </section>
+
+    <section class="section container info">
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Options</h3>
+          <ul class="features">
+            <li><strong>Base de données SC‑CO₂</strong> : 300 € (achat) ou +100 €/an (mises à jour)</li>
+            <li><strong>Formation & onboarding</strong> : à partir de 600 €</li>
+            <li><strong>Support prioritaire (SLA)</strong> : sur devis</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Consulting pour l’industrie</h3>
+          <p class="muted">Accélérez vos projets : optimisation de procédés, réduction des coûts expérimentaux, scale‑up plus rapide. Prestation sur devis, adaptée à vos contraintes.</p>
+          <a class="btn secondary" href="#contact">Parler à un expert</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2>ROI : des résultats mesurables</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Moins d’essais</h3>
+          <p class="muted">Réduisez 2–4 campagnes/an (≈ 1 200–2 000 € chacune) grâce au screening et aux modèles prédictifs.</p>
+        </div>
+        <div class="card">
+          <h3>Heures gagnées</h3>
+          <p class="muted">30–80 h ingénieur/an économisées via des calculs fiables et des tracés automatiques.</p>
+        </div>
+        <div class="card">
+          <h3>Décisions robustes</h3>
+          <p class="muted">Choix de solvants, paramètres et dimensionnement mieux informés dès les premières itérations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="essai">
+      <h2>Essai gratuit (14 jours)</h2>
+      <p class="lead">Accédez au Pack Standard en version d’évaluation (export limité). Idéal pour valider vos cas d’usage.</p>
+      <a class="btn primary" href="#contact">Demander un essai</a>
+    </section>
+
+    <section class="section container" id="contact">
+      <h2>Contact</h2>
+      <p>Besoin d’un devis, d’une licence flottante ou d’une offre de consulting ? Écrivez‑nous : <a href="mailto:contact@predict-sc.co">contact@predict-sc.co</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © Predict · CO₂ supercritique · Mises à jour & support inclus
+  </footer>
+</body>
+</html>
